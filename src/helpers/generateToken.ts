@@ -4,7 +4,7 @@ import IUser from '../interfaces/users.interface';
 
 dotenv.config();
 
-const secret = process.env.JWT_SECRET as string;
+const secret = 'mysupersecret';
 
 export default (user: IUser) => {
   const { id, username, classe, level } = user;
