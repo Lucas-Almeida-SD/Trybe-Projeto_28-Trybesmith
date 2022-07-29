@@ -1,8 +1,5 @@
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
 import IUser from '../interfaces/users.interface';
-
-dotenv.config();
 
 const secret = 'mysupersecret';
 
