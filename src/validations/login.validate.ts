@@ -1,8 +1,8 @@
 import Joi from 'joi';
 import { StatusCodes } from 'http-status-codes';
 import ILogin from '../interfaces/login.interface';
-import generateError from '../helpers/generateError';
 import IUser from '../interfaces/users.interface';
+import throwMyObjectError from '../helpers/throwMyObjectError';
 
 export const checkCredentials = (userLogin: ILogin) => {
   const { username, password } = userLogin;
@@ -14,19 +14,11 @@ export const checkCredentials = (userLogin: ILogin) => {
 
   if (!error) return;
 
-  const errorObject = generateError(StatusCodes.BAD_REQUEST, error.message);
-
-  const myError = new Error(JSON.stringify(errorObject));
-  myError.name = 'error object';
-
-  throw myError;
+  throwMyObjectError(StatusCodes.BAD_REQUEST, error.message);
 };
 
 export const checkAuthorization = (user: IUser | undefined) => {
   if (!user) {
-    const errorObject = generateError(StatusCodes.UNAUTHORIZED, 'Username or password invalid');
-    const myError = new Error(JSON.stringify(errorObject));
-    myError.name = 'error object';
-    throw myError;
+    throwMyObjectError(StatusCodes.UNAUTHORIZED, 'Username or password invalid');
   }
 };
