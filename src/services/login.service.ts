@@ -1,8 +1,8 @@
 import LoginModel from '../models/login.model';
 import ILogin from '../interfaces/login.interface';
-import EErrors from '../enumerates/errors.enumerate';
-import loginValidate from '../validations/login.validate';
+import * as loginValidate from '../validations/login.validate';
 import generateToken from '../helpers/generateToken';
+import IUser from '../interfaces/users.interface';
 
 export default class LoginService {
   public model: LoginModel;
@@ -12,13 +12,13 @@ export default class LoginService {
   }
 
   public async login(userLogin: ILogin): Promise<string> {
-    loginValidate(userLogin);
+    loginValidate.checkCredentials(userLogin);
 
     const user = await this.model.login(userLogin);
 
-    if (!user) throw new Error(EErrors.invalidUsernameOrPassword);
+    loginValidate.checkAuthorization(user);
 
-    const token = generateToken(user);
+    const token = generateToken(user as IUser);
 
     return token;
   }
