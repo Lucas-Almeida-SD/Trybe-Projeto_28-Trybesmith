@@ -1,3 +1,4 @@
+// Products -------------------------------------------------
 export const createProductRequest = {
   name: 'Arco Escudo Invejável',
   amount: '3 Gemas da Noite',
@@ -41,3 +42,19 @@ export const getAllProductsResponse = [
     orderId: 3,
   },
 ]
+
+// Users --------------------------------------------------
+export const createUserRequest = { 
+  username: "MAX",
+  classe: "swordsman",
+  level: 10,
+  password: "SavingPeople"
+}
+
+export const createdUser = {
+  id: 4,
+  username: "MAX",
+  classe: "swordsman",
+  level: 10,
+  password: "SavingPeople"
+}
