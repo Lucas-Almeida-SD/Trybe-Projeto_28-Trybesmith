@@ -12,7 +12,7 @@ export default (user: IUser) => {
     algorithm: 'HS256',
   } as object;
 
-  const token = jwt.sign({ data }, secret, jwtConfig);
+  const token = jwt.sign({ ...data }, secret, jwtConfig);
 
   return token;
 };
