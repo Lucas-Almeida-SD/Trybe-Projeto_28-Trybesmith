@@ -1,5 +1,5 @@
 import { Pool, ResultSetHeader } from 'mysql2/promise';
-import IProduct from '../interfaces/products.inteface';
+import IProduct, { IProductUpdate } from '../interfaces/products.inteface';
 import connectionDB from './connection';
 
 export default class ProductModel {
@@ -25,5 +25,22 @@ export default class ProductModel {
     const [products] = await this.connection.execute(query);
 
     return products as IProduct[];
+  }
+
+  public async update(productId: number, product: IProductUpdate): Promise<void> {
+    const { name, amount, orderId } = product;
+    const entries = Object.entries({ name, amount, orderId });
+    const filterEntries = entries.filter((e) => e[1]);
+    const keys = filterEntries.map((e) => e[0]);
+    const values = filterEntries.map((e) => e[1]);
+
+    const queryProperties = keys.map((key) => `${key} = ?`).join(',');
+    const query = `
+      UPDATE Trybesmith.Products
+      SET ${queryProperties}
+      WHERE id = ?
+    `;
+    
+    await this.connection.execute(query, [...values, productId]);
   }
 }
