@@ -27,7 +27,7 @@ describe('Testes da rota "GET /products"', () => {
       expect(response).to.have.status(200);
     });
 
-    it('Deve responder com o objeto do produto criado', function() {
+    it('Deve responder com uma lista de produtos no body da response', function() {
       expect(response.body).to.be.eqls(getAllProductsResponse);
     });
   });
