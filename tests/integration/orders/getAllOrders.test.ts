@@ -8,7 +8,7 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe.only('Testes da rota "GET /orders"', () => {
+describe('Testes da rota "GET /orders"', () => {
   let response: any;
 
   before(async () => {
