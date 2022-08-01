@@ -77,3 +77,27 @@ export const getAllOrdersResponse = [
     productsIds: [3, 4]
   },
 ]
+
+// Login ----------------------------------------------------------
+export const nonExistentUsernameloginRequest =   {
+  password: "1dragaonoceu",
+}
+
+export const nonExistentPasswordloginRequest =   {
+  username: "reigal",
+}
+
+export const invalidUsernameloginRequest =   {
+  username: "invalid-username",
+  password: "1dragaonoceu"
+}
+
+export const invalidPasswordloginRequest =   {
+  username: "reigal",
+  password: "invalid-password"
+}
+
+export const loginRequest =   {
+  username: "reigal",
+  password: "1dragaonoceu"
+}
