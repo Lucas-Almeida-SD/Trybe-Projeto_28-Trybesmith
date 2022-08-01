@@ -58,3 +58,22 @@ export const createdUser = {
   level: 10,
   password: "SavingPeople"
 }
+
+// Orders -----------------------------------------------------
+export const getAllOrdersResponse = [
+  {
+    id: 1,
+    userId: 1,
+    productsIds: [2]
+  },
+  {
+    id: 3,
+    userId: 2,
+    productsIds: [5]
+  },
+  {
+    id: 2,
+    userId: 3,
+    productsIds: [3, 4]
+  },
+]
