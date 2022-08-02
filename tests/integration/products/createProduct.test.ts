@@ -58,7 +58,7 @@ describe('Testes da rota "POST /products"', () => {
       expect(response).to.have.status(422);
     });
 
-    it('Deve responder com a mensagen de erro ""name" is required"', () => {
+    it('Deve responder com a mensagen de erro ""name" must be a string"', () => {
       const errorMessage = { message: '"name" must be a string' };
 
       expect(response.body).to.be.eqls(errorMessage);
@@ -78,7 +78,7 @@ describe('Testes da rota "POST /products"', () => {
       expect(response).to.have.status(422);
     });
 
-    it('Deve responder com a mensagen de erro ""name" is required"', () => {
+    it('Deve responder com a mensagen de erro ""name" length must be at least 3 characters long"', () => {
       const errorMessage = { message: '"name" length must be at least 3 characters long' };
 
       expect(response.body).to.be.eqls(errorMessage);
@@ -118,7 +118,7 @@ describe('Testes da rota "POST /products"', () => {
       expect(response).to.have.status(422);
     });
 
-    it('Deve responder com a mensagen de erro ""amount" is required"', () => {
+    it('Deve responder com a mensagen de erro ""amount" must be a string"', () => {
       const errorMessage = { message: '"amount" must be a string' };
 
       expect(response.body).to.be.eqls(errorMessage);
@@ -138,7 +138,7 @@ describe('Testes da rota "POST /products"', () => {
       expect(response).to.have.status(422);
     });
 
-    it('Deve responder com a mensagen de erro ""amount" is required"', () => {
+    it('Deve responder com a mensagen de erro ""amount" length must be at least 3 characters long"', () => {
       const errorMessage = { message: '"amount" length must be at least 3 characters long' };
 
       expect(response.body).to.be.eqls(errorMessage);
