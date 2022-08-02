@@ -1,4 +1,32 @@
 // Products -------------------------------------------------
+export const nonExistentNameCreateProductRequest = {
+  amount: '3 Gemas da Noite',
+}
+
+export const nonStringTypeNameCreateProductRequest = {
+  name: 1,
+  amount: '3 Gemas da Noite',
+}
+
+export const nameLengthNotAllowedCreateProductRequest = {
+  name: 'Ar',
+  amount: '3 Gemas da Noite',
+}
+
+export const nonExistentAmountCreateProductRequest = {
+  name: 'Arco Escudo Invejável',
+}
+
+export const nonStringTypeAmountCreateProductRequest = {
+  name: 'Arco Escudo Invejável',
+  amount: 1,
+}
+
+export const amountLengthNotAllowedCreateProductRequest = {
+  name: 'Arco Escudo Invejável',
+  amount: 'Ge',
+}
+
 export const createProductRequest = {
   name: 'Arco Escudo Invejável',
   amount: '3 Gemas da Noite',
