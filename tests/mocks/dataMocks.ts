@@ -112,6 +112,26 @@ export const classeLengthNotAllowedCreateUserRequest = {
   password: "SavingPeople"
 }
 
+export const nonExistentLevelCreateUserRequest = { 
+  username: "MAX",
+  classe: "swordsman",
+  password: "SavingPeople"
+}
+
+export const nonNumberTypeLevelCreateUserRequest = { 
+  username: "MAX",
+  classe: "swordsman",
+  level: 'string',
+  password: "SavingPeople"
+}
+
+export const levelEqualToZeroCreateUserRequest = { 
+  username: "MAX",
+  classe: "swordsman",
+  level: 0,
+  password: "SavingPeople"
+}
+
 export const createUserRequest = { 
   username: "MAX",
   classe: "swordsman",
