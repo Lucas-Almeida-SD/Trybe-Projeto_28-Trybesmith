@@ -72,6 +72,26 @@ export const getAllProductsResponse = [
 ]
 
 // Users --------------------------------------------------
+export const nonExistentUsernameCreateUserRequest = { 
+  classe: "swordsman",
+  level: 10,
+  password: "SavingPeople"
+}
+
+export const nonStringTypeUsenameCreateUserRequest = { 
+  username: [],
+  classe: "swordsman",
+  level: 10,
+  password: "SavingPeople"
+}
+
+export const usernameLengthNotAllowedCreateUserRequest = { 
+  username: "MA",
+  classe: "swordsman",
+  level: 10,
+  password: "SavingPeople"
+}
+
 export const createUserRequest = { 
   username: "MAX",
   classe: "swordsman",
