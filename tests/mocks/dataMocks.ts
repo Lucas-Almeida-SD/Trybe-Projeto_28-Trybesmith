@@ -186,6 +186,14 @@ export const getAllOrdersResponse = [
   },
 ]
 
+export const nonArrayTypeProductsIdsCreateOrderRequest = {
+  productsIds: '[1, 2]',
+}
+
+export const createOrderRequest =  {
+  productsIds: [1, 2],
+}
+
 // Login ----------------------------------------------------------
 export const nonExistentUsernameloginRequest =   {
   password: "1dragaonoceu",
@@ -209,3 +217,6 @@ export const loginRequest =   {
   username: "reigal",
   password: "1dragaonoceu"
 }
+
+// Token ----------------------------------------------------------
+export const invalidToken = 'invalidToken';
