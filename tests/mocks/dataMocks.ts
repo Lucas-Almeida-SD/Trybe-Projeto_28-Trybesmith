@@ -190,8 +190,22 @@ export const nonArrayTypeProductsIdsCreateOrderRequest = {
   productsIds: '[1, 2]',
 }
 
+export const productsIdsLengthNotAllowedCreateOrderRequest = { 
+  productsIds: [],
+}
+
 export const createOrderRequest =  {
   productsIds: [1, 2],
+}
+
+export const oneProductCreateOrderResponse = {
+  productsIds: [1],
+  userId: 1,
+}
+
+export const manyProductsCreateOrderResponse = {
+  productsIds: [1, 2],
+  userId: 1,
 }
 
 // Login ----------------------------------------------------------
