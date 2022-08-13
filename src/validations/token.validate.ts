@@ -1,6 +1,7 @@
 import { StatusCodes } from 'http-status-codes';
 import jwt from 'jsonwebtoken';
 import throwMyObjectError from '../helpers/throwMyObjectError';
+import IToken from '../interfaces/token.interface';
 
 const secret = 'mysupersecret';
 
@@ -9,7 +10,7 @@ export default (token: string) => {
 
   try {
     const decoded = jwt.verify(token, secret);
-    return decoded;
+    return decoded as IToken;
   } catch (err) {
     throwMyObjectError(StatusCodes.UNAUTHORIZED, 'Invalid token');
   }
