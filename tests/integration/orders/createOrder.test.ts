@@ -16,7 +16,7 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe.only('Testes da rota "POST /orders', () => {
+describe('Testes da rota "POST /orders', () => {
   let response: any;
   let loginResponse: any;
 
