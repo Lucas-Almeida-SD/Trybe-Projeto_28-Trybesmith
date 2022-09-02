@@ -1,6 +1,6 @@
 # Projeto Trybe Smith
 
-Esse projeto foi realizado para exercitar o que foi aprendido no Bloco 26 do Módulo de Back End do curso da [Trybe](https://www.betrybe.com/), no qual foi sobre `ORM (Object Relational Mapping)`, `JWT` e `testes de integração`.
+Esse projeto foi realizado para exercitar o que foi aprendido no Bloco 26 do Módulo de Back End do curso da [Trybe](https://www.betrybe.com/), no qual foi sobre `TypeScript` e sua utilização com `Node.js` e `Express`.
 
 Nesse projeto foi desenvolvida uma `REST API`, através do `Node.js`, `Express` e `TypeScript`, utilizando arquitetura de software `MSC`, tendo como sistema de gerenciamento de banco de dados o `MySQL`.
 
